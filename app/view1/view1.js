@@ -27,8 +27,11 @@ function drawError() {
 }
 // handles the response, adds the html
 function drawOutput(responseText) {
-    $scope.person.name = responseText;
+	$scope.$apply(function(){
+		$scope.person.name = responseText;
+	});
 }
+
 // helper function for cross-browser request object
 function getRequest(url, success, error) {
     var req = false;
