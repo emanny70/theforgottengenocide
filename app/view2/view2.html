@@ -1,5 +1,40 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div align="center">
+  <form novalidate class="css-form input-group">
+  <table border="0">
+    <tr>
+      <td>First Name:</td>
+      <td><input type="text" ng-model="user.name" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>Last Name (Given):</td>
+      <td><input type="text" ng-model="user.givenLastName" /></td>
+    </tr>
+    <tr>
+      <td>Last Name (Real):</td>
+      <td><input type="text" ng-model="user.realLastName" /></td>
+    </tr>
+    <tr>
+      <td>E-mail:</td>
+      <td><input type="email" ng-model="user.email" required /></td>
+    </tr>
+    <tr>
+      <td>Birth Place:</td>
+      <td><input type="text" ng-model="user.birthPlace" required /></td>
+    </tr>
+  </table>
+    Gender: <input type="radio" ng-model="user.gender" value="male" />male
+    <input type="radio" ng-model="user.gender" value="female" />female<br />
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+</div>
+
+<style type="text/css">
+  .css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+  .css-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
+  }
+</style>
