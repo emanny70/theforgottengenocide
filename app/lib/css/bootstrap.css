@@ -12,6 +12,10 @@ html {
 }
 body {
   margin: 0;
+  background-image: url("bg_mon_1920x1200.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #000000;
 }
 article,
 aside,
