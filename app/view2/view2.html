@@ -1,27 +1,10 @@
 <div align="center">
-  <form novalidate class="css-form input-group">
-  <table border="0">
-    <tr>
-      <td>First Name:</td>
-      <td><input type="text" ng-model="user.name" class="form-control" required /></td>
-    </tr>
-    <tr>
-      <td>Last Name (Given):</td>
-      <td><input type="text" ng-model="user.givenLastName" class="form-control" /></td>
-    </tr>
-    <tr>
-      <td>Last Name (Real):</td>
-      <td><input type="text" ng-model="user.realLastName" class="form-control" /></td>
-    </tr>
-    <tr>
-      <td>E-mail:</td>
-      <td><input type="email" ng-model="user.email" class="form-control" required /></td>
-    </tr>
-    <tr>
-      <td>Birth Place:</td>
-      <td><input type="text" ng-model="user.birthPlace" class="form-control" required /></td>
-    </tr>
-  </table>
+  <form novalidate class="css-form form-signin input-group">
+    <input type="text" ng-model="user.name" class="form-control" placeholder="First Name"required />
+    <input type="text" ng-model="user.givenLastName" class="form-control" placeholder="Last Name (Given)"/>
+    <input type="text" ng-model="user.realLastName" class="form-control" placeholder="Last Name (Real)" />
+    <input type="email" ng-model="user.email" class="form-control" placeholder="Email address" required />
+    <input type="text" ng-model="user.birthPlace" class="form-control" placeholder="Birth Place" required />
     Gender: <input type="radio" ng-model="user.gender" value="male" />male
     <input type="radio" ng-model="user.gender" value="female" />female<br />
     <input type="button" ng-click="reset()" value="Reset" />
