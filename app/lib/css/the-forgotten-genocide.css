@@ -1,0 +1,16 @@
+/*!
+ * the-forgotten-genocide
+ */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+	  height:100%;
+}
+body {
+  margin: 0;
+  background-image: url("../img/Armenian_Orphans_Merzifon_1918.jpg");
+  background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center
+}
