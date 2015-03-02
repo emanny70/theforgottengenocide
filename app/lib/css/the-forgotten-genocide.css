@@ -9,11 +9,16 @@ html {
 }
 body {
   margin: 0;
-  background-image: url("../img/Armenian_Orphans_Merzifon_1918.jpg");
+  background-image: url("../img/background.jpg");
   background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
     background-position: center center
 }
 .verticalLine {
     border-left: 1px #B9B9B9;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 20px;
 }
