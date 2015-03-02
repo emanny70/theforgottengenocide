@@ -7,7 +7,7 @@ $dbname = "forgottenGenocid";
 
 //These variable values need to be changed by you before deploying
 $password = "my1stDB2!";
-$usertable = "Person";
+$usertable = "person";
 $yourfield = "name";
 
 //Connecting to your database
