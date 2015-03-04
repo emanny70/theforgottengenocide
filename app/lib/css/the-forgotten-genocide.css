@@ -12,7 +12,8 @@ body {
   background-image: url("../img/background.jpg");
   background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
-    background-position: center center
+    background-position: center center;
+	color: #000000;
 }
 .verticalLine {
     border-left: 1px #B9B9B9;
