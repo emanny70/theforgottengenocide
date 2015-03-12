@@ -1,5 +1,10 @@
 <?php 
 $app->get('/session', function() {
+    if (!isset($_SESSION['user'])) {
+      header('HTTP/1.1 401 Unauthorized');
+      echoResponse(401, $session);
+      return;
+    }
     $db = new DbHandler();
     $session = $db->getSession();
     $response["uid"] = $session['uid'];
