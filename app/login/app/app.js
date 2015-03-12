@@ -35,14 +35,17 @@ app.config(['$routeProvider',
   }])
     .run(function ($rootScope, $location, Data) {
         $rootScope.$on("$routeChangeStart", function (event, next, current) {
-            $rootScope.authenticated = false;
+						if ($rootScope.authenticated === true) {
+
             Data.get('session').then(function (results) {
                 if (results.uid) {
-                    $rootScope.authenticated = true;
                     $rootScope.uid = results.uid;
                     $rootScope.name = results.name;
                     $rootScope.email = results.email;
-                } else {
+                } 
+            });
+            } else {
+					$rootScope.authenticated = false;
                     var nextUrl = next.$$route.originalPath;
                     if (nextUrl == '/signup' || nextUrl == '/login') {
 
@@ -50,7 +53,9 @@ app.config(['$routeProvider',
                         $location.path("/login");
                     }
                 }
-            });
+			
+			
+			
         });
     }).factory('authHttpResponseInterceptor',['$q','$location',function($q,$location){
     return {

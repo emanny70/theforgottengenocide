@@ -8,6 +8,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
         }).then(function (results) {
             Data.toast(results);
             if (results.status == "success") {
+				$rootScope.authenticated = true;
                 $location.path('dashboard');
             }
         });
@@ -27,6 +28,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
         Data.get('logout').then(function (results) {
             Data.toast(results);
             $location.path('login');
+			$rootScope.authenticated = false;
         });
     }
 });
