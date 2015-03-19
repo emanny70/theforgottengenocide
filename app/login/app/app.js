@@ -29,6 +29,10 @@ app.config(['$routeProvider',
                 controller: 'authCtrl',
                 role: '0'
             })
+				.when('/whyRegister', {
+                title: 'WhyRegister',
+                templateUrl: 'partials/whyRegister.html',
+            })
             .otherwise({
                 redirectTo: '/login'
             });
@@ -47,7 +51,7 @@ app.config(['$routeProvider',
             } else {
 					$rootScope.authenticated = false;
                     var nextUrl = next.$$route.originalPath;
-                    if (nextUrl == '/signup' || nextUrl == '/login') {
+                    if (nextUrl == '/signup' || nextUrl == '/login' || nextUrl == '/whyRegister') {
 
                     } else {
                         $location.path("/login");

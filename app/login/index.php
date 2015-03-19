@@ -13,7 +13,7 @@
           <link href="css/the-forgotten-genocide.css" rel="stylesheet">
                 <style>
                   a {
-                  color: orange;
+                  color: brown;
                   }
                 </style>
                 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,7 +26,16 @@
               </head>
 
   <body ng-cloak="">
-    <div >
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="row">
+           <div class="navbar-header col-md-2">
+            <a class="navbar-brand" rel="home" title="Why Register?" href="#/whyRegister">Why Register?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div >
       <div class="container" style="margin-top:20px;">
 
         <div data-ng-view="" id="ng-view" class="slide-animation"></div>
