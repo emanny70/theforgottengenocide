@@ -51,11 +51,12 @@ $app->post('/signUp', function() use ($app) {
     $email = $r->customer->email;
     $password = $r->customer->password;
     $city_of_birth = $r->customer->city_of_birth;
+    $gender = $r->customer->gender;
     $isUserExists = $db->getOneRecord("select 1 from person where email='$email'");
     if(!$isUserExists){
         $r->customer->password = passwordHash::hash($password);
         $tabble_name = "person";
-        $column_names = array('name', 'email', 'password', 'city_of_birth');
+        $column_names = array('name', 'email', 'password', 'gender', 'city_of_birth');
         $result = $db->insertIntoTable($r->customer, $column_names, $tabble_name);
         if ($result != NULL) {
             $response["status"] = "success";

@@ -57,6 +57,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="name">Gender</label>
+                                <div class="col-sm-7">
+                                    <input type="radio" ng-model="signup.gender" value="M" />male
+                                    <input type="radio" ng-model="signup.gender" value="F" />female<br/>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <span class="lbl col-sm-5"> </span>
                                 <div class="col-sm-7">
                                     <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="signUp(signup)" data-ng-disabled="signupForm.$invalid">

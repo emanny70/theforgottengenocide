@@ -13,7 +13,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             }
         });
     };
-    $scope.signup = {email:'',password:'',name:'',city_of_birth:''};
+    $scope.signup = {email:'',password:'',name:'', gender: '', city_of_birth:''};
     $scope.signUp = function (customer) {
         Data.post('signUp', {
             customer: customer
