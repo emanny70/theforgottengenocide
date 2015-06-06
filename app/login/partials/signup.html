@@ -32,7 +32,7 @@
                                 <label class="col-sm-5 control-label no-padding-right" for="password2">Confirm Password</label>
                                 <div class="col-sm-7">
                                     <span class="block input-icon input-icon-right">
-                                <input type="password" class="form-control" name="password2" placeholder="Password Again" ng-model="signup.password2" password-match="signup.password" required/>                                
+                                <input type="password" class="form-control" name="password2" placeholder="Password Again" ng-model="signup.password2" password-match="signup.password" required/>
                                 <small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.required"> Enter password again.</small>
 
                                <small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.passwordNoMatch && !signupForm.password2.$error.required"> Password do not match.</small>
@@ -41,10 +41,26 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-5 control-label no-padding-right" for="name">Name</label>
+                                <label class="col-sm-5 control-label no-padding-right" for="name">First Name</label>
                                 <div class="col-sm-7">
                                     <span class="block input-icon input-icon-right">
-                                <input type="text" class="form-control" placeholder="Name" ng-model="signup.name" />
+                                <input type="text" class="form-control" placeholder="First Name" ng-model="signup.firstName" />
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="name">Given Last Name</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Given Last Name" ng-model="signup.givenLastname" />
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="name">Real Last Name</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Real Last Name" ng-model="signup.realLastName" />
                             </span>
                                 </div>
                             </div>
@@ -57,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-5 control-label no-padding-right" for="name">Gender</label>
+                                <label class="col-sm-5 control-label no-padding-right" for="gender">Gender</label>
                                 <div class="col-sm-7">
                                     <input type="radio" ng-model="signup.gender" value="M" />male
                                     <input type="radio" ng-model="signup.gender" value="F" />female<br/>
